@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: service-notification
+  port: 8082
+  cloud:
+    config:
+      uri: http://service-main:8888/config
+  config:
+    import: configserver:http://service-main:8888/config
+eureka:
+  instance:
+    prefer-ip-address: false
+    hostname: service-notification
+  client:
+    serviceUrl:
+      defaultZone: http://service-main:8888/eureka

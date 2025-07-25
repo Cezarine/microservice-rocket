@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: service.main
+  cloud:
+    config:
+#      enabled: false
+      server:
+        prefix: /config
+        git:
+          uri: https://github.com/Cezarine/config-server.git
+          username: ${USER_GIT}
+          password: ${TOKEN_GIT}
+          clone-on-start: true
+          search-paths: config
+eureka:
+  instance:
+    hostname: localhost
+  server:
+#    enableSelfPreservation: false
+  client:
+    register-with-eureka: false
+    fetchRegistry: false
+server:
+  port: 8888
