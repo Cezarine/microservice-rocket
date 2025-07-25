@@ -1,5 +1,7 @@
 services:
   service-main:
+    env_file:
+      - .env
     build:
       context: ./service.main
     ports:

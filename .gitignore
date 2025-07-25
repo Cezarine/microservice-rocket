@@ -36,3 +36,4 @@ build/
 .vscode/
 /service.notification/.mvn/wrapper/maven-wrapper.properties
 /service.main/.mvn/wrapper/maven-wrapper.properties
+/.env
